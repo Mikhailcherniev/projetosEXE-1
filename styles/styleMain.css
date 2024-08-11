@@ -258,6 +258,40 @@ main {
     height: auto;
 }
 
+
+
+
+
+
+
+
+
+#location {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+#locationInfo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid var(--corDestaqueVermelho);
+    padding: 3em;
+    
+
+    height: 700px;
+}
+#locationMap {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid var(--corDestaqueVermelho);
+    padding: 2em;
+    width: 100%;
+}
+
 #workWithUs {
     display: flex;
     position: relative;
