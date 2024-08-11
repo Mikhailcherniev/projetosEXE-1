@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,35 +10,145 @@
     <link rel="stylesheet" href="styles/styleMain.css">
 
 </head>
+
 <body>
-    
+
     <header>
         <div id="headerInfo">
-            <div id="headerLocation">   
-                <img src="./assets/" class="icon">
+            <div id="headerLocation">
+                <img src="./assets/icons/iconLocal.png" class="icon">
                 <p>1156 Chapel St, New Haven</p>
             </div>
 
-            <img src="./assets/" id="logo">
+            <img src="./assets/icons/logo.png" id="logo">
 
             <button id="languageToggle" onclick="Escolher('pt')">
-                <p id="txtLanguage">Lingua1</p>
-                <img src="" id="iconLanguage">
+                <p id="txtLanguage1">Lingua1</p>
+                <img src="" id="iconLanguage1">
             </button>
-            <button id="languageToggle" onclick="Escolher('en')">
-                <p id="txtLanguage">Lingua1</p>
-                <img src="" id="iconLanguage">
+            <button id="languageToggle2" onclick="Escolher('en')">
+                <p id="txtLanguage2">Lingua1</p>
+                <img src="" id="iconLanguage2">
             </button>
             <p id="txtLanguageTest">a</p>
         </div>
+
+        <div id="headerOptions">
+            <a href="" class="headerOpt">About Us</a>
+            <a href="" class="headerOpt">Our Art</a>
+            <a href="" class="headerOpt">Courses</a>
+            <a href="" class="headerOpt">Next Events</a>
+            <a href="" class="headerOpt">Local</a>
+        </div>
     </header>
-    <main id="mainArea">
-        <h1>YALE SCHOOL <span>OF</span> ART</h1>
+    <main>
+
+        <div id="landingPage">
+            <h1>YALE SCHOOL <span>OF</span> ART</h1>
+            <button>
+                <img src="./assets/icons/iconArrow.png" class="icon">
+                <p>Learn More</p>
+            </button>
+        </div>
 
     </main>
 
+    <section id="spacingMargin">
+        <section id="aboutUs">
+            <div id="lateralBarAboutUs"></div>
+            <div id="infoAboutUs">
+                <h2>About <span>Us</span></h2>
+
+                <p>The Yale School of Art is a graduate school that confers MFAs in Graphic Design,
+                    Painting/Printmaking,
+                    Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our
+                    website
+                    exists as an ongoing collaborative experiment in digital publishing and information sharing. It
+                    functions as
+                    a wiki—all members of the School of Art community have the ability to add new, and edit most
+                    existing
+                    content.
+                </p>
+            </div>
+
+
+            <img id="imgAboutUs" src="./assets/imgs/imgYaleArtSchool.png">
+        </section>
+
+        <section id="ourArt">
+            <!-- COLOCAR CARROSEL DE OBRAS PRIMAS AQ -->
+        </section>
+
+        <section>
+            <h2>Our <span>Courses</span></h2>
+            <!-- colocar cursos aq -->
+        </section>
+
+        <section id="nextEvents">
+            <h2>Next <span>Events</span></h2>
+            <div class="">
+
+            </div>
+        </section>
+
+        <section id="location">
+            <div>
+                <h2>Our <span>Location</span></h2>
+                <p>We are located at
+                    1156 Chapel St, New Haven
+                </p>
+                <button>
+                    <img src="./assets/icons/iconLocal.png" class="icon">
+                    <p>See Location</p>
+                </button>
+            </div>
+
+            <div>
+                <!-- aq vai um mapa interativo (ver como faz isso, ja tivemos uma aula no ano passado) -->
+            </div>
+        </section>
+    </section>
+
+
+    <section id="workWithUs">
+        <h2>Work With <span>Us</span></h2>
+        <p>
+            SoA is seeking a Gallery Exhibition Manager to oversee the day-to-day operations of our exhibition spaces.
+            This role will be an essential partner in expanding the School's gallery programming and will serve as a
+            mentor to staff and students on exhibition and installation best practices.
+        </p>
+
+        <form id="formBase">
+            <div class="formInput">
+                <label for="">E-Mail</label>
+                <input type="email">
+            </div>
+
+
+            <div class="formInput">
+                <label for="">Phone Number</label>
+                <input type="tel">
+            </div>
+
+            <div class="formInput">
+                <label for="">Sla man</label>
+                <input type="text">
+            </div>
+
+            <button type="submit">
+                <img src="./assets/icons/iconSend.png" class="icon">
+                <p>Send Your Aplication</p>
+            </button>
+        </form>
+    </section>
+
+    <footer>
+
+    </footer>
+
     <!-- scripts -->
-     <script src="./scripts/main.js"></script>
-     <script src="./scripts/language/languageToggle.js"></script>
+    <script src="./scripts/main.js"></script>
+    <script src="./languageToggle.js"></script>
 </body>
+
 </html>

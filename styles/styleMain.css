@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: var(--corTxt);
+}
+
+:root {
+    --corDestaqueAmarelo: #FFE515;
+    --corDestaqueVermelho: #ED2D23;
+    --corDestaqueAzul: #40B4F5;
+    --corBg1: #222125;
+    --corBg2: #414141;
+    --corTxt: #fff;
+}
+
+/* effects */
+.headerOpt:hover {
+    transition: ease-in-out 300ms;
+    color: #40B4F5;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    background-color: var(--corBg1);
+}
+
+span {
+    color: var(--corDestaqueAmarelo);
+}
+
+/* functionalElements */
+button {
+    display: flex;
+    flex-direction: row;
+
+    background: none;
+
+    border-color: var(--corTxt);
+    border-width: 2px;
+    border-radius: 15px;
+
+    align-items: center;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+input {
+    background: none;
+
+    border-color: var(--corTxt);
+    border-width: 2px;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+.formInput {
+    display: flex;
+    flex-direction: column;
+    width: 40%;
+}
+
+#formBase {
+    justify-content: space-around;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+/* sections */
+#spacingMargin {
+    margin: 0 5%
+}
+
+header {
+    z-index: 10;
+}
+
+main {
+    display: flex;
+    position: relative;
+    width: 100%;
+    /* Ocupa toda a largura da página */
+    height: 100vh;
+    background-image: url('../assets/imgs/bgLandingPage.png');
+    /* Substitua pelo caminho da sua imagem */
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área da div */
+    background-position: center;
+    /* Centraliza a imagem verticalmente e horizontalmente */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+}
+
+#landingPage {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    flex-direction: column;
+
+    width: 100%;
+    height: 100%;
+}
+
+#aboutUs {
+    display: flex;
+    flex-direction: row;
+}
+
+#lateralBarAboutUs {
+    background-color: var(--corDestaqueVermelho);
+    width: 5px;
+    height: 100%;
+}
+
+#infoAboutUs {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#imgAboutUs {
+    height: 300px;
+}
+
+
+
+
+#workWithUs {
+    display: flex;
+    position: relative;
+    width: 100%;
+    /* Ocupa toda a largura da página */
+    height: 100vh;
+    background-image: url("../assets/imgs/workWithUsBg.png");
+    background-size: cover;
+    /* Faz a imagem cobrir toda a área da div */
+    background-position: center;
+    /* Centraliza a imagem verticalmente e horizontalmente */
+    background-repeat: no-repeat;
+    /* Evita repetição da imagem */
+    flex-direction: column;
+}
