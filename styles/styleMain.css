@@ -72,9 +72,13 @@ a {
 }
 
 #headerOptions {
+    margin: var(--marginLateral);
     display: flex;
-    width: 100%;
+    width: 80%;
     justify-content: space-evenly;
+    align-items: center;
+    min-height: 50px;
+    border-bottom: 2px solid var(--corTxt); 
 }
 
 body {
