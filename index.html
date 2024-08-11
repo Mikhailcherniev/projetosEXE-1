@@ -15,17 +15,22 @@
 
     <header>
         <div id="headerInfo">
-            <div id="headerLocation">
+            <div class="headerInfoSection" id="headerLocation">
                 <img src="./assets/icons/iconLocal.png" class="icon">
                 <p>1156 Chapel St, New Haven</p>
             </div>
 
-            <img src="./assets/icons/logo.png" id="logo">
+            <div class="headerInfoSection">
+                <img src="./assets/icons/logo.png" id="logo">
+            </div>
 
-            <button id="languageToggle" onclick="toggleLanguage()">
-                <h3 id="txtLanguage">English</h3>
-                <img src="./assets/icons/iconEN.png" id="iconLanguage">
-            </button>
+
+            <div class="headerInfoSection">
+                <button id="languageToggle" onclick="toggleLanguage()">
+                    <h3 id="txtLanguage">English</h3>
+                    <img class="icon" src="./assets/icons/iconEN.png" id="iconLanguage">
+                </button>
+            </div>
         </div>
 
         <div id="headerOptions">
@@ -36,6 +41,38 @@
             <a href="" class="headerOpt">Local</a>
         </div>
     </header>
+    <script>
+        let lastScrollTop = 0;
+        const header = document.querySelector('header');
+        const headerInfo = document.querySelector('#headerInfo');
+
+        window.addEventListener('scroll', function () {
+            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
+
+            if (currentScrollTop > lastScrollTop) {
+                // Rolando para baixo
+                header.style.transform = 'translateY(-100%)'; // Oculta o headerInfo
+            } else {
+                // Rolando para cima
+                header.style.transform = 'translateY(0)'; // Mostra o headerInfo
+            }
+            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Para lidar com casos de rolar para cima além do topo
+        });
+
+        document.addEventListener('DOMContentLoaded', function () {
+            const header = document.querySelector('header');
+            const scrollThreshold = 100; // A posição de rolagem em pixels para adicionar a classe
+
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > scrollThreshold) {
+                    header.classList.add('background');
+                } else {
+                    header.classList.remove('background');
+                }
+            });
+        });
+    </script>
+
     <main>
 
         <div id="landingPage">
@@ -48,7 +85,10 @@
 
     </main>
 
-    <iframe width="854" height="480" src="https://www.youtube.com/embed/smn0Rx65Lzc?si=GYTrq6FQYDDfObEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/smn0Rx65Lzc?si=GYTrq6FQYDDfObEL"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+        referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 
     <section class="spacingMargin">
@@ -125,23 +165,22 @@
 
             <form id="formBase">
                 <div class="formInput">
-                    <label for="">E-Mail</label>
-                    <input type="email">
+                    <label for="email">E-Mail</label>
+                    <input type="email" id="email" name="email">
                 </div>
-
-
+            
                 <div class="formInput">
-                    <label for="">Phone Number</label>
-                    <input type="tel">
+                    <label for="phone">Phone Number</label>
+                    <input type="tel" id="phone" name="phone">
                 </div>
-
+            
                 <div class="formInput">
-                    <label for="">Sla man</label>
-                    <input type="text">
+                    <label for="adress">Your Adress</label>
+                    <input type="text" id="adress" name="adress">
                 </div>
-
+            
                 <button type="submit">
-                    <img src="./assets/icons/iconSend.png" class="icon">
+                    <img src="./assets/icons/iconSend.png" class="icon" alt="Send">
                     <h3>Send Your Application</h3>
                 </button>
             </form>

@@ -34,6 +34,7 @@ h1 {
 }
 h2 {
     font-size: 2.5em;
+    margin-bottom: 1em;
 }
 h3 {
     font-family: 'montserrat';
@@ -82,6 +83,8 @@ span {
 .icon {
     width: 32px;
     height: 32px;
+    
+    margin: 0px 15px;
 }
 
 /* functionalElements */
@@ -100,6 +103,10 @@ button {
     cursor: pointer;
 }
 
+label {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+}
 input {
     background: none;
 
@@ -108,18 +115,27 @@ input {
     border-top: none;
     border-left: none;
     border-right: none;
+    height: 40px;
 }
 
 .formInput {
     display: flex;
     flex-direction: column;
-    width: 40%;
+    width: 100%;
+    min-height: 100px;
+    margin-top: 20px;
+    
 }
 
 #formBase {
-    justify-content: space-around;
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 colunas de igual largura */
+    gap: 10em; /* Espaço entre os itens da grade */
+    justify-items: stretch; /* Faz com que os itens se estiquem para preencher a coluna */
+    align-items: center; /* Alinha os itens verticalmente no centro da célula da grade */
+    margin: 0 auto; /* Centraliza o formulário horizontalmente */
+    max-width: 85%; /* Largura máxima do formulário */
+    margin-top: 5em;
 }
 
 /* sections */
@@ -134,15 +150,29 @@ section {
 header {
     display: flex;
     flex-direction: column;
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100%;
+    transition: transform 0.2s ease-in-out;
+
 
     z-index: 10;
 }
+.headerInfoSection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 33.3%;
+    margin: 2em 0em;
+}
+
 #headerInfo {
     display: flex;
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+    transition: transform 0.3s ease;
 }
 #headerLocation {
     display: flex;
@@ -201,9 +231,6 @@ main {
     height: auto;
 }
 
-
-
-
 #workWithUs {
     display: flex;
     position: relative;
@@ -218,4 +245,6 @@ main {
     background-repeat: no-repeat;
     /* Evita repetição da imagem */
     flex-direction: column;
+
+    justify-content: center;
 }
