@@ -60,6 +60,11 @@ p, a {
     transition: ease-in-out 300ms;
     color: #40B4F5;
 }
+#headerOptions {
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+}
 
 body {
     display: flex;
@@ -74,7 +79,10 @@ span {
 }
 
 /* assets */
-
+.icon {
+    width: 32px;
+    height: 32px;
+}
 
 /* functionalElements */
 button {
@@ -133,7 +141,13 @@ header {
 #headerInfo {
     display: flex;
     width: 100%;
-    justify-content: space-around;
+    align-items: center;
+    justify-content: space-evenly;
+}
+#headerLocation {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }
 
 main {
