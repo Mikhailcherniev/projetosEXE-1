@@ -13,6 +13,46 @@
     --corBg1: #222125;
     --corBg2: #414141;
     --corTxt: #fff;
+    --marginLateral: 0 10%;
+}
+
+/* fonts */
+@font-face {
+    font-family: 'montserrat';
+    src: url('../assets/fonts/Montserrat-Regular.ttf');
+}
+@font-face {
+    font-family: 'loraTitulo';
+    src: url('../assets/fonts/lora/Lora-Regular.ttf');
+}
+h1, h2 {
+    font-family: 'loraTitulo', sans-serif;
+    font-weight: 400;
+}
+h1 {
+    font-size: 6em;
+}
+h2 {
+    font-size: 2.5em;
+}
+h3 {
+    font-family: 'montserrat';
+    font-size: 2.0em;
+    font-weight: 200;
+}
+
+
+p, a {
+    font-family: 'montserrat';
+    font-size: 1.3em;
+}
+
+/* fontDetails */
+.title {
+    margin: 50px 10px;
+}
+#aboutUsTxt {
+    margin: 0px 0px 25px 0px;
 }
 
 /* effects */
@@ -32,6 +72,9 @@ body {
 span {
     color: var(--corDestaqueAmarelo);
 }
+
+/* assets */
+
 
 /* functionalElements */
 button {
@@ -72,12 +115,25 @@ input {
 }
 
 /* sections */
-#spacingMargin {
-    margin: 0 5%
+.spacingMargin {
+    margin: var(--marginLateral)
+}
+
+section {
+    margin-top: 10em;
 }
 
 header {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+
     z-index: 10;
+}
+#headerInfo {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
 }
 
 main {
@@ -115,18 +171,20 @@ main {
 
 #lateralBarAboutUs {
     background-color: var(--corDestaqueVermelho);
-    width: 5px;
-    height: 100%;
+    width: 15px;
+    height: auto;
 }
 
 #infoAboutUs {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin: 0px 20px;
 }
 
 #imgAboutUs {
-    height: 300px;
+    width: 40%;
+    height: auto;
 }
 
 

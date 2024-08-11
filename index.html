@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
@@ -22,15 +22,10 @@
 
             <img src="./assets/icons/logo.png" id="logo">
 
-            <button id="languageToggle" onclick="Escolher('pt')">
-                <p id="txtLanguage1">Lingua1</p>
-                <img src="" id="iconLanguage1">
+            <button id="languageToggle" onclick="toggleLanguage()">
+                <h3 id="txtLanguage">English</h3>
+                <img src="./assets/icons/iconEN.png" id="iconLanguage">
             </button>
-            <button id="languageToggle2" onclick="Escolher('en')">
-                <p id="txtLanguage2">Lingua1</p>
-                <img src="" id="iconLanguage2">
-            </button>
-            <p id="txtLanguageTest">a</p>
         </div>
 
         <div id="headerOptions">
@@ -44,22 +39,25 @@
     <main>
 
         <div id="landingPage">
-            <h1>YALE SCHOOL <span>OF</span> ART</h1>
+            <h1 id="landingPageTitle">YALE SCHOOL <span id="DlandingPageTitle">OF</span> ART</h1>
             <button>
                 <img src="./assets/icons/iconArrow.png" class="icon">
-                <p>Learn More</p>
+                <h3>Learn More</h3>
             </button>
         </div>
 
     </main>
 
-    <section id="spacingMargin">
+    <iframe width="854" height="480" src="https://www.youtube.com/embed/smn0Rx65Lzc?si=GYTrq6FQYDDfObEL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+
+    <section class="spacingMargin">
         <section id="aboutUs">
             <div id="lateralBarAboutUs"></div>
             <div id="infoAboutUs">
-                <h2>About <span>Us</span></h2>
+                <h2 class="title" id="aboutUsTitle">About <span id="DaboutUsTitle">Us</span></h2>
 
-                <p>The Yale School of Art is a graduate school that confers MFAs in Graphic Design,
+                <p id="aboutUsTxt">The Yale School of Art is a graduate school that confers MFAs in Graphic Design,
                     Painting/Printmaking,
                     Photography, and Sculpture; and offers undergraduate-level art courses to Yale College students. Our
                     website
@@ -76,16 +74,17 @@
         </section>
 
         <section id="ourArt">
+            <h2 id="ourArtTitle">Our <span id="DourArtTitle">Art</span></h2>
             <!-- COLOCAR CARROSEL DE OBRAS PRIMAS AQ -->
         </section>
 
-        <section>
-            <h2>Our <span>Courses</span></h2>
+        <section id="ourCourses">
+            <h2 id="ourCoursesTitle">Our <span id="DourCoursesTitle">Courses</span></h2>
             <!-- colocar cursos aq -->
         </section>
 
         <section id="nextEvents">
-            <h2>Next <span>Events</span></h2>
+            <h2 id="nextEventsTitle">Next <span id="DnextEventsTitle">Events</span></h2>
             <div class="">
 
             </div>
@@ -93,13 +92,13 @@
 
         <section id="location">
             <div>
-                <h2>Our <span>Location</span></h2>
+                <h2 id="ourLocationTitle">Our <span id="DourLocationTitle">Location</span></h2>
                 <p>We are located at
                     1156 Chapel St, New Haven
                 </p>
                 <button>
                     <img src="./assets/icons/iconLocal.png" class="icon">
-                    <p>See Location</p>
+                    <h3>See Location</h3>
                 </button>
             </div>
 
@@ -107,39 +106,47 @@
                 <!-- aq vai um mapa interativo (ver como faz isso, ja tivemos uma aula no ano passado) -->
             </div>
         </section>
+
+        <section id="seeMore">
+            <h2 id="seeMoreTitle">See <span id="DseeMoreTitle">More</span></h2>
+        </section>
     </section>
 
 
     <section id="workWithUs">
-        <h2>Work With <span>Us</span></h2>
-        <p>
-            SoA is seeking a Gallery Exhibition Manager to oversee the day-to-day operations of our exhibition spaces.
-            This role will be an essential partner in expanding the School's gallery programming and will serve as a
-            mentor to staff and students on exhibition and installation best practices.
-        </p>
+        <div class="spacingMargin">
+            <h2 id="workWUTitle">Work With <span id="DworkWUTitle">Us</span></h2>
+            <p>
+                SoA is seeking a Gallery Exhibition Manager to oversee the day-to-day operations of our exhibition
+                spaces.
+                This role will be an essential partner in expanding the School's gallery programming and will serve as a
+                mentor to staff and students on exhibition and installation best practices.
+            </p>
 
-        <form id="formBase">
-            <div class="formInput">
-                <label for="">E-Mail</label>
-                <input type="email">
-            </div>
+            <form id="formBase">
+                <div class="formInput">
+                    <label for="">E-Mail</label>
+                    <input type="email">
+                </div>
 
 
-            <div class="formInput">
-                <label for="">Phone Number</label>
-                <input type="tel">
-            </div>
+                <div class="formInput">
+                    <label for="">Phone Number</label>
+                    <input type="tel">
+                </div>
 
-            <div class="formInput">
-                <label for="">Sla man</label>
-                <input type="text">
-            </div>
+                <div class="formInput">
+                    <label for="">Sla man</label>
+                    <input type="text">
+                </div>
 
-            <button type="submit">
-                <img src="./assets/icons/iconSend.png" class="icon">
-                <p>Send Your Aplication</p>
-            </button>
-        </form>
+                <button type="submit">
+                    <img src="./assets/icons/iconSend.png" class="icon">
+                    <h3>Send Your Application</h3>
+                </button>
+            </form>
+        </div>
+
     </section>
 
     <footer>
