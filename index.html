@@ -41,37 +41,6 @@
             <a href="" class="headerOpt">Local</a>
         </div>
     </header>
-    <script>
-        let lastScrollTop = 0;
-        const header = document.querySelector('header');
-        const headerInfo = document.querySelector('#headerInfo');
-
-        window.addEventListener('scroll', function () {
-            const currentScrollTop = window.pageYOffset || document.documentElement.scrollTop;
-
-            if (currentScrollTop > lastScrollTop) {
-                // Rolando para baixo
-                header.style.transform = 'translateY(-100%)'; // Oculta o headerInfo
-            } else {
-                // Rolando para cima
-                header.style.transform = 'translateY(0)'; // Mostra o headerInfo
-            }
-            lastScrollTop = currentScrollTop <= 0 ? 0 : currentScrollTop; // Para lidar com casos de rolar para cima além do topo
-        });
-
-        document.addEventListener('DOMContentLoaded', function () {
-            const header = document.querySelector('header');
-            const scrollThreshold = 100; // A posição de rolagem em pixels para adicionar a classe
-
-            window.addEventListener('scroll', function () {
-                if (window.scrollY > scrollThreshold) {
-                    header.classList.add('background');
-                } else {
-                    header.classList.remove('background');
-                }
-            });
-        });
-    </script>
 
     <main>
 
@@ -166,17 +135,17 @@
             <form id="formBase">
                 <div class="formInput">
                     <label for="email">E-Mail</label>
-                    <input type="email" id="email" name="email">
+                    <input placeholder="Write your E-Mail here" type="email" id="email" name="email">
                 </div>
             
                 <div class="formInput">
                     <label for="phone">Phone Number</label>
-                    <input type="tel" id="phone" name="phone">
+                    <input placeholder="Example: (99) 99999-9999" type="tel" id="phone" name="phone">
                 </div>
             
                 <div class="formInput">
                     <label for="adress">Your Adress</label>
-                    <input type="text" id="adress" name="adress">
+                    <input placeholder="Example: 1156 Chapel St, New Haven" type="text" id="adress" name="adress">
                 </div>
             
                 <button type="submit">
@@ -188,13 +157,25 @@
 
     </section>
 
-    <footer>
+    <footer class="spacingMargin">
+        <div id="footerTitleArea">
+            <img src="./assets/icons/logo.png" class="logo">
+            <h2 id="footerTitle">YALE SCHOOL <span id="DfooterTitle">OF</span> ART</h2>
+        </div>
+        
+        <div id="footerSections">
 
+        </div>
+
+        <div id="footerOptions">
+            a
+        </div>
     </footer>
 
     <!-- scripts -->
     <script src="./scripts/main.js"></script>
     <script src="./languageToggle.js"></script>
+    <script src="./scripts/scrollHeader.js"></script>
 </body>
 
 </html>

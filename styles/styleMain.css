@@ -12,6 +12,7 @@
     --corDestaqueAzul: #40B4F5;
     --corBg1: #222125;
     --corBg2: #414141;
+    --corBgBlack: #000;
     --corTxt: #fff;
     --marginLateral: 0 10%;
 }
@@ -21,21 +22,27 @@
     font-family: 'montserrat';
     src: url('../assets/fonts/Montserrat-Regular.ttf');
 }
+
 @font-face {
     font-family: 'loraTitulo';
     src: url('../assets/fonts/lora/Lora-Regular.ttf');
 }
-h1, h2 {
+
+h1,
+h2 {
     font-family: 'loraTitulo', sans-serif;
     font-weight: 400;
 }
+
 h1 {
     font-size: 6em;
 }
+
 h2 {
     font-size: 2.5em;
     margin-bottom: 1em;
 }
+
 h3 {
     font-family: 'montserrat';
     font-size: 2.0em;
@@ -43,7 +50,8 @@ h3 {
 }
 
 
-p, a {
+p,
+a {
     font-family: 'montserrat';
     font-size: 1.3em;
 }
@@ -52,6 +60,7 @@ p, a {
 .title {
     margin: 50px 10px;
 }
+
 #aboutUsTxt {
     margin: 0px 0px 25px 0px;
 }
@@ -61,6 +70,7 @@ p, a {
     transition: ease-in-out 300ms;
     color: #40B4F5;
 }
+
 #headerOptions {
     display: flex;
     width: 100%;
@@ -83,7 +93,7 @@ span {
 .icon {
     width: 32px;
     height: 32px;
-    
+
     margin: 0px 15px;
 }
 
@@ -107,6 +117,7 @@ label {
     font-family: 'montserrat';
     font-size: 1.3em;
 }
+
 input {
     background: none;
 
@@ -116,6 +127,7 @@ input {
     border-left: none;
     border-right: none;
     height: 40px;
+    padding-left: 10px;
 }
 
 .formInput {
@@ -124,17 +136,23 @@ input {
     width: 100%;
     min-height: 100px;
     margin-top: 20px;
-    
+
 }
 
 #formBase {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2 colunas de igual largura */
-    gap: 10em; /* Espaço entre os itens da grade */
-    justify-items: stretch; /* Faz com que os itens se estiquem para preencher a coluna */
-    align-items: center; /* Alinha os itens verticalmente no centro da célula da grade */
-    margin: 0 auto; /* Centraliza o formulário horizontalmente */
-    max-width: 85%; /* Largura máxima do formulário */
+    grid-template-columns: repeat(2, 1fr);
+    /* 2 colunas de igual largura */
+    gap: 10em;
+    /* Espaço entre os itens da grade */
+    justify-items: stretch;
+    /* Faz com que os itens se estiquem para preencher a coluna */
+    align-items: center;
+    /* Alinha os itens verticalmente no centro da célula da grade */
+    margin: 0 auto;
+    /* Centraliza o formulário horizontalmente */
+    max-width: 85%;
+    /* Largura máxima do formulário */
     margin-top: 5em;
 }
 
@@ -154,11 +172,12 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    transition: transform 0.2s ease-in-out;
+    transition: transform 0.2s ease-in-out, background-color 0.3s ease-in-out;
 
 
     z-index: 10;
 }
+
 .headerInfoSection {
     display: flex;
     justify-content: center;
@@ -174,10 +193,14 @@ header {
     justify-content: space-evenly;
     transition: transform 0.3s ease;
 }
+
 #headerLocation {
     display: flex;
     flex-direction: row;
     align-items: center;
+}
+header.background {
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 main {
@@ -247,4 +270,30 @@ main {
     flex-direction: column;
 
     justify-content: center;
+}
+
+footer {
+    display: flex;
+
+    flex-direction: column;
+    width: 100%;
+    margin: var(--marginLateral);
+
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--corBgBlack);
+}
+
+#footerTitleArea {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    margin: 15px
+}
+#footerTitle {
+    margin: 0px 15px
+}
+#footerOptions {
+    width: 100%;
 }

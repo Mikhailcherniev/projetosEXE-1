@@ -58,6 +58,13 @@ function Escolher(idioma) {
             document.getElementById('workWUTitle').childNodes[0].nodeValue = workWUTitle;
             document.getElementById('DworkWUTitle').innerText = texto.DworkWUTitle;
 
+
+            let footerTitle = texto.footerTitle.split("{span}")[0]; 
+            let footerTitleAfterSpan = texto.footerTitle.split("{span}")[1]; 
+            
+            document.getElementById('footerTitle').childNodes[0].nodeValue = footerTitle; 
+            document.getElementById('DfooterTitle').innerText = texto.DfooterTitle; 
+            document.getElementById('footerTitle').childNodes[2].nodeValue = footerTitleAfterSpan; 
         })
         .catch(error => console.error('Erro ao carregar o arquivo de idioma:', error));
 }
