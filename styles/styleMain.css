@@ -422,3 +422,19 @@ footer {
 #footerOptions {
     width: 100%;
 }
+#footerTitles {
+    display: flex;
+    width: 100%;
+    align-items: center;
+}
+#footerSectionsTitle {
+    width: 60%;
+}
+#footerSocialsTitle {
+    width: 40%;
+}
+.footerTitles {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
