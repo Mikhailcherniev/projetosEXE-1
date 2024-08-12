@@ -314,31 +314,35 @@ main {
     right: 100px;
 
 }
-#newsMapping {
+#sectionNews {
     display: flex;
+    width: 100%;
     flex-direction: row;
-
+    margin-top: 15px;
 }
-
-
+#sectionWideNews {
+    display: flex;
+    flex-direction: column;
+    width: 70%;
+    overflow: hidden;
+    margin-right: 15px;
+}
+#sectionThinNews {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    overflow: hidden;
+}
 .news {
-    display: flex;
-    flex-wrap: wrap;
-    width: 700px;    
-    height: auto;
-    margin: 15px;
+    margin-bottom: 50px;
 }
-.newsImg {
-    width: 500px;
-    height: 300px;
-    margin-right: 25px;
-}
-.newsTitleMargin {
+.newsTitleMargin{
     margin-bottom: 15px;
+    text-transform: uppercase;
 }
-#sectionNewsVertical {
-    display: flex;
-    flex-direction: row;
+.imgNews {
+    width: 100%;
+    height: auto;
 }
 
 #workWithUs {
