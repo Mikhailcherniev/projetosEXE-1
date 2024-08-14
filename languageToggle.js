@@ -64,7 +64,15 @@ function Escolher(idioma) {
             
             document.getElementById('footerTitle').childNodes[0].nodeValue = footerTitle; 
             document.getElementById('DfooterTitle').innerText = texto.DfooterTitle; 
-            document.getElementById('footerTitle').childNodes[2].nodeValue = footerTitleAfterSpan; 
+            document.getElementById('footerTitle').childNodes[2].nodeValue = footerTitleAfterSpan;
+            
+            
+            for (let i = 1; i < 2; i++) {
+                document.querySelector(`.text${i}`).textContent = texto[`text${i}`]
+            }
+
+
+
         })
         .catch(error => console.error('Erro ao carregar o arquivo de idioma:', error));
 }
